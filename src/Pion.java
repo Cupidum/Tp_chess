@@ -1,17 +1,18 @@
-public class Pion {
-    private PieceType type;
+public class Pion extends Piece{
     private Couleur couleur;
+    private PieceType type;
 	
     public Pion(PieceType type, Couleur couleur) {
-        this.type = type;
-        this.couleur = couleur;
+        super(type, couleur);
+    }
+	
+	public Couleur getCouleur() {
+        return couleur;
     }
 	
     public PieceType getType() {
         return type;
     }
 	
-    public Couleur getCouleur() {
-        return couleur;
-    }
+    
 }
