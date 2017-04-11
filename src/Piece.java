@@ -4,7 +4,7 @@ public abstract class Piece {
     
     public Piece(Couleur couleur, PieceType type) {
         this.couleur = couleur;
-	    this.type = type;
+        this.type = type;
     }
 	
     public Couleur getCouleur() {
