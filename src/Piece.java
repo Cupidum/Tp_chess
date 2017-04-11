@@ -1,10 +1,10 @@
 public abstract class Piece {
     protected Couleur couleur;
-	protected PieceType type;
+    protected PieceType type;
     
     public Piece(Couleur couleur, PieceType type) {
         this.couleur = couleur;
-		this.type = type;
+	    this.type = type;
     }
 	
     public Couleur getCouleur() {
