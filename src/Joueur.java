@@ -7,5 +7,5 @@ public class Joueur() {
 	
     public Couleur getCouleur() {
         return couleur;
-	}	
+    }	
 }
