@@ -1,12 +1,10 @@
 public abstract class Piece {
-    protected Type piece;
+    protected Piece piece;
     
-    public enum Type {
-		WHITE, BLACK, ROI, REINE, FOU, CHEVAL, TOUR, PION
-    }
+
 	
 	
-	public Piece(Type type) {
+    public Piece(Type type) {
         this.piece = type;
     }
 	
