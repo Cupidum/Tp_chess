@@ -1,28 +1,28 @@
 public class Square {
 
-	private Piece piece;
-	private int x;
-	private int y;
+    private Piece piece;
+    private int x;
+    private int y;
 
-	public Square(Piece piece, int x, int y) {
-		this.piece = piece;
-		this.x = x;
-		this.y = y;
-	}
+    public Square(Piece piece, int x, int y) {
+        this.piece = piece;
+        this.x = x;
+        this.y = y;
+    }
 
-	public Piece getPiece() {
-		return piece;
-	}
+    public Piece getPiece() {
+        return piece;
+    }
 
-	public int getX() {
-		return x;
-	}
+    public int getX() {
+        return x;
+    }
 
-	public int getY() {
-		return y;
-	}
+    public int getY() {
+        return y;
+    }
 
-	public boolean isEmpty() {
-		return piece == null;
-	}
+    public boolean isEmpty() {
+        return piece == null;
+    }
 }

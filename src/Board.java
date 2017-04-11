@@ -1,8 +1,8 @@
 public class Board {
 
-	private Piece[][] board;
+    private Piece[][] board;
 
-	public Board(Piece[][] board) {
-		this.board = board;
-	}
+    public Board(Piece[][] board) {
+        this.board = board;
+    }
 }
