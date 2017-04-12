@@ -99,60 +99,53 @@ public class Ruleset {
     }
 	
 	public void ruleRoi() {
-	List<Square> allowed = new ArrayList<>();
+	    List<Square> allowed = new ArrayList<>();
         Square from = move.getFrom();
         Square to = move.getTo();
     
         Square current;
-    
 		
-		
-            // Right
-        for (int i = from.getX(); i < 8; i++) {
-            current = board[i][from.getY()];
-            if (!current.isEmpty()) {
-                if (move.getPiece().getColor() != current.getPiece().getColor()) {
-                    allowed.add(current);
-                }
-                break;
+        // Right
+        current = board[i][from.getY()];
+        if (!current.isEmpty()) {
+            if (move.getPiece().getColor() != current.getPiece().getColor()) {
+                allowed.add(current);
             }
-            allowed.add(current);    
+            break;
+            }
+        allowed.add(current);    
         }
     
         // Left
-        for (int i = from.getX(); i >=0; i--) {
-            current = board[i][from.getY()];
-            if (!current.isEmpty()) {
-                if (move.getPiece().getColor() != current.getPiece().getColor()) {
-                    allowed.add(current);
-                }
-                break;
+        current = board[i][from.getY()];
+        if (!current.isEmpty()) {
+            if (move.getPiece().getColor() != current.getPiece().getColor()) {
+                allowed.add(current);
             }
-            allowed.add(current);   
+            break;
         }
+        allowed.add(current);   
     
         // Above
-        for (int i = from.getY(); i < 8; i++) {
-            current = board[from.getX()][i];
-            if (!current.isEmpty()) {
-                if (move.getPiece().getColor() != current.getPiece().getColor()) {
-                    allowed.add(current);
-                }
-                break;
+        current = board[from.getX()][i];
+        if (!current.isEmpty()) {
+            if (move.getPiece().getColor() != current.getPiece().getColor()) {
+                allowed.add(current);
             }
-            allowed.add(current);    
+            break;
         }
+        allowed.add(current);    
+     
     
         // Below
-        for (int i = from.getY(); i >= 0; i--) {
-            current = board[from.getX()][i];
-            if (!current.isEmpty()) {
-                if (move.getPiece().getColor() != current.getPiece().getColor()) {
-                    allowed.add(current);
-                }
-                break;
+        current = board[from.getX()][i];
+        if (!current.isEmpty()) {
+            if (move.getPiece().getColor() != current.getPiece().getColor()) {
+                allowed.add(current);
             }
-            allowed.add(current);
+            break;
+        }
+        allowed.add(current);
         }
     
         if (!allowed.contains(to)) {
