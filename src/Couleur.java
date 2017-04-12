@@ -1,3 +1,3 @@
 public enum Couleur {
-	WHITE, BLACK
+	BLANC, NOIR
 }
