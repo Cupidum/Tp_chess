@@ -8,25 +8,51 @@ public class Ruleset {
         this.move = move;		
     }
 	
-    public void rulePion() {
-        if(move.getPiece().getCouleur() == BLANC) {
-			if(board[x][move.getTo])
-                if(move.getTo().getX() - move.getfrom().getX() == 0 && move.getTo().getY() - move.getfrom().getY() == 1)
-                    board[x][move.getTo()];
-        }
-        else
-            if(move.getTo().getX() - move.getfrom().getX() == 0 && move.getTo().getY() - move.getfrom().getY() == -1)
-                board[x][move.getTo()];
+    public void rulePion(Move move) {
+        Square from = move.getFrom();
+        Square to = move.getTo();
+    
+        Square allowed = null;
+        if (move.getPiece().getColor() == Color.BLANC) {
+            allowed = board[from.getX()][from.getY() + 1];
+    } else {
+        allowed = board[from.getX()][from.getY() - 1];
     }
+    
+    if (allowed.getX() != to.getX() || allowed.getY() != to.getY()) {
+        // ERROR
+    }
+    
+    // Il y a une piece dans la position possible
+    else if (!allowed.isEmpty()) {
+        // ERROR
+    } else {
+        board[to.getX()][to.getY()].setPiece(move.getPiece());
+        board[from.getX()][to.getY()].setPiece(null);
+    }        
+}
 	
-    public void ruleTour() {
-        if(move.getPiece().getCouleur() == BLANC) {
-			if()
-			    if(move.getTo().getX() - move.getfrom().getX() == 0 && move.getTo().getY() - move.getfrom().getY() == 1)
-			        board[x][move.getTo()];
-        }
-        else
-            if(move.getTo().getX() - move.getfrom().getX() == 0 && move.getTo().getY() - move.getfrom().getY() == -1)
-                board[x][move.getTo()];        
+    public void ruleTour(Move move) {
+    Square from = move.getFrom();
+    Square to = move.getTo();
+    
+    Square allowed = null;
+    if (move.getPiece().getColor() == Color.BLANC) {
+        allowed = board[from.getX()][from.getY() + 1];
+    } else {
+        allowed = board[from.getX()][from.getY() - 1];
     }
+    
+    if (allowed.getX() != to.getX() && allowed.getY() != to.getY()) {
+        // ERROR
+    }
+    
+    // Il y a une piece dans la position possible
+    else if (!allowed.isEmpty()) {
+        // ERROR
+    } else {
+        board[to.getX()][to.getY()].setPiece(move.getPiece());
+        board[from.getX()][to.getY()].setPiece(null);
+    }        
+}
 }
