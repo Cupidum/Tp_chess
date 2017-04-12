@@ -29,4 +29,11 @@ public class Square {
     public boolean isEmpty() {
         return piece == null;
     }
+    public void equals(Object o) {
+        if (o instanceof Square) {
+            Square s = (Square) o;
+            return x == s.x && y == s.y;
+        }
+        return false;
+    }
 }
