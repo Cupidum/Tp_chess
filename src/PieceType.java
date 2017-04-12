@@ -1,3 +1,3 @@
-public enum Type {
+public enum PieceType {
 	ROI, REINE, FOU, CHEVAL, TOUR, PION
 }
