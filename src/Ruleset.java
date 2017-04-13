@@ -106,50 +106,41 @@ public class Ruleset {
         Square current;
 
         // Right
-        current = board.getSquare(from.getX, from.getY());
+        current = board.getSquare(from.getX(), from.getY());
         if (!current.isEmpty()) {
             if (move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
                 allowed.add(current);
             }
-            break;
         }
         allowed.add(current);    
-    }
-
-        // Left
     
-        current = board.getSquare(from.getX, from.getY());
+        // Left
+        current = board.getSquare(from.getX(), from.getY());
         if (!current.isEmpty()) {
             if (move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
                 allowed.add(current);
             }
-            break;
         }
         allowed.add(current);
-    }
-
+    
         // Above
-        current = board.getSquare(from.getX(), from.getY);
+        current = board.getSquare(from.getX(), from.getY());
         if (!current.isEmpty()) {
             if (move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
                 allowed.add(current);
             }
-            break;
         }
         allowed.add(current);
-    }
-
+    
         // Below
-        current = board.getSquare(from.getX(), from.getY);
+        current = board.getSquare(from.getX(), from.getY());
         if (!current.isEmpty()) {
             if (move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
                 allowed.add(current);
             }
-            break;
         }
         allowed.add(current);
-    }
-
+    
         if (!allowed.contains(to)) {
             // ERROR
         } else {
@@ -157,7 +148,7 @@ public class Ruleset {
             board.setPiece(null, from.getX(), from.getX());
         }
     }
-	public void ruleCheval() {
+/*	public void ruleCheval() {
         List<Square> allowed = new ArrayList<>();
         Square from = move.getFrom();
         Square to = move.getTo();
@@ -167,4 +158,4 @@ public class Ruleset {
 		//up right
 		if(move.)
     }
-}
+}*/
