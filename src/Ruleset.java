@@ -148,6 +148,7 @@ public class Ruleset {
             board.setPiece(null, from.getX(), from.getX());
         }
     }
+}
 /*	public void ruleCheval() {
         List<Square> allowed = new ArrayList<>();
         Square from = move.getFrom();
