@@ -149,7 +149,7 @@ public class Ruleset {
         }
     }
 }
-/*	public void ruleCheval() {
+	public void ruleCheval() {
         List<Square> allowed = new ArrayList<>();
         Square from = move.getFrom();
         Square to = move.getTo();
@@ -157,6 +157,91 @@ public class Ruleset {
         Square current;
 		
 		//up right
-		if(move.)
+		if (from.getX() == 1 && from.getY() == 2) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+        
+        //up left
+        if (from.getX() == -1 && from.getY() == 2) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //left up
+        if (from.getX() == -2 && from.getY() == 1) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //left down
+        if (from.getX() == -2 && from.getY() == -1) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //down left
+        if (from.getX() == -1 && from.getY() == -2) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //down right
+        if (from.getX() == 1 && from.getY() == -2) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //right down
+        if (from.getX() == 2 && from.getY() == -1) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }
+
+        //right up
+        if (from.getX() == 2 && from.getY() == 1) {
+            current = board.getSquare(from.getX(), from.getY());
+			if (!current.isEmpty()) {
+			    if(move.getPiece().getCouleur() != current.getPiece().getCouleur()) {
+                    allowed.add(current);
+				}
+            }
+        allowed.add(current)    
+        }		
     }
-}*/
+}
