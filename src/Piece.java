@@ -1,6 +1,6 @@
-public abstract class Piece {
-    protected Couleur couleur;
-    protected PieceType type;
+public class Piece {
+    private Couleur couleur;
+    private PieceType type;
     
     public Piece(Couleur couleur, PieceType type) {
         this.couleur = couleur;
