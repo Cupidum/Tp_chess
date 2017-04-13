@@ -50,6 +50,7 @@ public class Board {
                         throw new RuntimeException();
                 }
             }
+            s.append(System.getProperty("line.separator"));
         }
         return s.toString();
     }
