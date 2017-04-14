@@ -34,31 +34,32 @@ public class Game {
 		
         Board board = new Board(squares);
         System.out.println(board);
-		while(true) {
+        while(true) {
             if (whiteplayed == false) {
-			    System.out.println("Piece blanche a vous de jouer!");
+                System.out.println("Piece blanche a vous de jouer!");
                 System.out.print("Entrez la coordonnee en x de la piece : ");
                 int x = reader.nextInt();
-				System.out.print("Entrez la coordonnee en y de la piece : ");
+                System.out.print("Entrez la coordonnee en y de la piece : ");
                 int y = reader.nextInt();
-				System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
+                System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
                 int z = reader.nextInt();
-				System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
+                System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
                 int w = reader.nextInt();
-				Move bouger = new Move(bo, squares[x][y], squares[z][w]);
+                Move bouger = new Move(bo, squares[x][y], squares[z][w]);
 				
 				
 			} else {
                 System.out.println("Piece Noir a vous de jouer!");
                 System.out.print("Entrez la coordonnee en x de la piece : ");
                 int x = reader.nextInt();
-				System.out.print("Entrez la coordonnee en y de la piece : ");
+                System.out.print("Entrez la coordonnee en y de la piece : ");
                 int y = reader.nextInt();
-				System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
+                System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
                 int z = reader.nextInt();
-				System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
+                System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
                 int w = reader.nextInt();
-				Move bouger = new Move(piece, squares[x][y], squares[z][w]);				
-			}				
+                Move bouger = new Move(piece, squares[x][y], squares[z][w]);				
+            }				
+        }
     }
 }
