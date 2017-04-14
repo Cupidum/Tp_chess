@@ -1,5 +1,9 @@
 public class Game {
     public static void main(String[] args){
+		Joueur joueur1 = new Joueur(BLANC);
+		Joueur joueur2 = new Joueur(NOIR);
+		boolean whiteplayed = false;
+		Scanner reader = new Scanner(System.in);  // Reading from System.in
         Square[][] squares = new Square[8][8];
         squares[7][0] = new Square(new Piece(Couleur.NOIR, PieceType.TOUR), 7, 0);
         squares[7][1] = new Square(new Piece(Couleur.NOIR, PieceType.CHEVAL), 7, 1);
@@ -26,8 +30,35 @@ public class Game {
         for (int i = 0; i < 8; i++) {
             squares[1][i] = new Square(new Piece(Couleur.BLANC, PieceType.PION), 1, i);
         }
-
+        
+		
         Board board = new Board(squares);
         System.out.println(board);
+		while(true) {
+            if (whiteplayed == false) {
+			    System.out.println("Piece blanche a vous de jouer!");
+                System.out.print("Entrez la coordonnee en x de la piece : ");
+                int x = reader.nextInt();
+				System.out.print("Entrez la coordonnee en y de la piece : ");
+                int y = reader.nextInt();
+				System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
+                int z = reader.nextInt();
+				System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
+                int w = reader.nextInt();
+				Move bouger = new Move(bo, squares[x][y], squares[z][w]);
+				
+				
+			} else {
+                System.out.println("Piece Noir a vous de jouer!");
+                System.out.print("Entrez la coordonnee en x de la piece : ");
+                int x = reader.nextInt();
+				System.out.print("Entrez la coordonnee en y de la piece : ");
+                int y = reader.nextInt();
+				System.out.println("Entrez la coordonnee en x de la nouvelle position : ");
+                int z = reader.nextInt();
+				System.out.println("Entrez la coordonnee en y de la nouvelle position : ");
+                int w = reader.nextInt();
+				Move bouger = new Move(piece, squares[x][y], squares[z][w]);				
+			}				
     }
 }
